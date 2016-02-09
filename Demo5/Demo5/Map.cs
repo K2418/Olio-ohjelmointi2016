@@ -74,6 +74,8 @@ namespace Demo5
         public void StartGame()
         {
             gameOn = true;
+            Console.WriteLine("Welcome\nTry to keep away from monster!\nUse arrow keys to move!\n\nPress Enter key to start!\n");
+            while (!(Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Enter)) { }
             miuku.Move(this);
             if (gameOver == true) { GameOver(); }
         }
